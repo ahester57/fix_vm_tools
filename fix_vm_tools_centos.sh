@@ -6,7 +6,7 @@ reinstall () {
         case $answer in
             y|Y|yes|YES)
                 echo "Reinstalling..." &&
-                sudo yum updateinfo &&
+                sudo yum check-update &&
                 sudo yum reinstall open-vm-tools open-vm-tools-desktop
                 break;;
             n|N|no|NO)
